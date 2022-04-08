@@ -1,0 +1,132 @@
+body {
+    background-color: rgb(202, 159, 223);
+    margin: 0;
+    font-family: 'Anek Bangla', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+
+
+/*container*/
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*intro*/
+.intro {
+    
+    width: 100%;
+    height: 100vh;
+    background: url("../imagesR/aboutJ.jpg") center 
+    no-repeat;
+    background-size: cover;
+    -webkit-background-size:cover;
+}
+.intro__mess {
+    font-family: 'Exo 2', sans-serif;
+    
+    width: 63%;
+    margin-top: 9%;
+    margin-left: 0%;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(51, 28, 42);
+    text-align: left;
+    
+    
+    border: 3px solid rgb(185, 169, 182);
+    background-color: rgb(236, 218, 232);
+    box-shadow: 10px 5px 5px rgb(80, 73, 73)
+
+}
+/* header*/
+.header {
+    padding-top: 30px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
+
+.header__logo {
+    font-family: 'Anek Bangla', sans-serif;
+    font-size: 37px;
+    font-weight: 700;
+    color: bisque;
+}
+
+
+/* Navigation */
+.nav {
+    font-size: 14px;
+    font-weight: 500;
+    
+}
+
+.nav__link{
+    font-family: 'Allerta', sans-serif;;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    word-spacing: 5px;
+    position: relative;
+    
+    
+    
+    color: #f0e8cb;
+    text-decoration: none;
+    transition: color 0.1s linear;
+
+}
+
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    
+    
+    background-color: #74406c;
+    opacity: 0;
+    position: absolute;
+    
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: opacity .1s linear;
+    
+}
+
+
+
+.nav__link:hover {
+    color: #74406c;
+}
+.nav__link:hover:after,
+.nav__link.active:after {
+    opacity: 1;
+}
+
+.nav__link.active {
+    color: #74406c;
+}
+
+/*REVIEWS*/
+
