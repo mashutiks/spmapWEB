@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+   
+<style>
+   #mapid{width:100%;height:100%}
+</style>
+</head>
+<body>
+<div id="mapid"></div>
+<div id="sidebar">
+    <h1>leaflet-sidebar</h1>
+</div>
+<script>
+var mymap = L.map('mapid').setView([56.308158, 38.133545], 14);
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data <a target="_blank" href="http://www.openstreetmap.org">OpenStreetMap.org</a> contributors, ' +
+    '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+	detectRetina:false,
+}).addTo(mymap);
+var marker = L.marker([56.312304, 38.138553]).addTo(mymap);
+marker.on('mouseover', function(ev) {
+  ev.target.openPopup();
+});
+//marker.on('mouseout', function(ev) {
+//  ev.target.closePopup();
+//});
+
+var sidebar = L.control.sidebar('sidebar', {
+    position: 'left'
+});
+
+map.addControl(sidebar);
+// Show sidebar
+sidebar.show();
+
+// Hide sidebar
+sidebar.hide();
+
+// Toggle sidebar visibility
+sidebar.toggle();
+
+// Check sidebar visibility
+var visible = sidebar.isVisible();
+
+
+
+
+
+
+//var marker = L.marker([56.312304, 38.138553]).addTo(mymap);
+//function onClick(e) {alert(this.latlng);}
+marker.addTo(mymap);
+var marker1 = L.marker([56.312163, 38.136465]).addTo(mymap);
+
+var marker2 = L.marker([56.307547, 38.131288]).addTo(mymap);
+var marker3 = L.marker([56.301281, 38.167801]).addTo(mymap);
+var marker4 = L.marker([56.293981148751925, 38.15115628817213]).addTo(mymap);
+var marker6 = L.marker([56.309027088079816, 38.13417061198824]).addTo(mymap);
+var marker5 = L.marker([56.31256292478748, 38.13786209849638]).addTo(mymap);
+var marker7 = L.marker([56.312278627625126, 38.13826791198838]).addTo(mymap);
+var marker8 = L.marker([56.30238995886108, 38.13011016965991]).addTo(mymap);
+var marker9 = L.marker([56.31258672829011, 38.13785136966037]).addTo(mymap);
+marker.bindPopup("<img src='https://lh3.googleusercontent.com/l_IGDkkyR2slVjPZt41yfJHu0eM-jSpjtCmrNufaLQXP_0Aw8KTuwrPYCh1q9F9n80m1uUZvvYtHV48ihA=w1080-h608-p-no-v0' width='250' height='200'><br><b>Музей советского детства<br></b>Музей, в котором собраны игрушки, игры и символы советского детства. Это уникальное место, объединяющее поколение детей, растущих в эпоху быстро меняющегося технологического прогресса и поэтому с пеленок, умеющих пользоваться мобильными телефонами, и поколение взрослых, выросших в то время, когда на улице было намного интереснее, чем дома. Родителей, бабушек и дедушек здесь ждут приятные воспоминания. А дети поймут, как проходило детство родителей без мобильных телефонов, интернета и компьютерных игр. В музее проводятся экскурсии, мастер-классы по выжиганию и росписи деревянных сувениров. Также в музее представлены игровые автоматы советского времени, которые работают до сих пор. Для игры в них необходимо приобрести специальные жетоны.<b><br>Адрес:<br></b> ул. Карла Маркса, 7, корп. 16, Сергиев Посад (эт. 2)<b><br>Контакты:</b>https://vk.com/cccp_toys</b><br>   https://www.instagram.com/cccp_toys/</b><br>  +7 (901) 528-73-11 <b><br> Сайт: </b> https://toysmuseum.business.site/").openPopup();
+marker1.bindPopup("<img src='https://ic.pics.livejournal.com/appassionata_lr/13101813/2686174/2686174_600.jpg' width=250 height=200><br><b>Кафе «Ландау»</b><br>Атмосферное кафе в центре Сергиева Посада с интересным дизайном. Основная тематика заведения – химия и физика. Подача напитков осуществляется в соответствие с тематикой кафе: колбы, пипетки и т.п. «Ландау» - отличное место для отдыха после долгих прогулок по Сергиеву Посаду.<b><br>Адрес: ул. Карла Маркса, 7, Сергиев Посад<b><br>Контакты:br></b> https://www.instagram.com/cafe_landau/ <br></b> https://www.instagram.com/cafe_landau/ <br></b> +7 (916) 677-21-15 <b><br> Сайт: </b><br> https://landausp.ru/").openPopup();
+marker2.bindPopup("<img src='https://avatars.mds.yandex.net/get-altay/2405086/2a00000173ca503b5675f7aa426e74ed781e/XXL' width=250 height=200><br><b>Троицкий дом ремёсел</b><br>Если после Музея матрешки вас заинтересовала тема народного творчества и мастерства, то данные мастер-классы для вас. Основной их целью является рассказать посетителям о народных ремеслах и ознакомить их с техникой изготовления лучших образцов народного творчества. Мастер-классы Свято-Троицкой Сергиевой Лавры включают в себя более десяти различных направлений: гончарное ремесло, лепка из глины, роспись фигурок, роспись по дереву и т.д.<b><br>Адрес: </b>Сергиев Посад, Свято-Троицкая Сергиева лавра <b><br>Контакты: </b> https://vk.com/craftstsl <br></b> https://www.instagram.com/remeslo_lavra/ </b><br> +7 (910) 471-01-70 <b><br> Сайт: </b><br> http://www.stsl.ru/news/all/voskresnyy-master-klass-po-goncharnomu-masterstvu").openPopup();
+marker3.bindPopup("<img src='https://tvr24.tv/uploads/news/image/11747/skity.jpg' width=250 height=200><br><b>Городской парк Скитские пруды</b><br>Отличная площадка для отдыха. Если вы устали от походов по музеям, выставкам и даже ресторанам, то здесь есть отличная возможность уединиться с природой в прогулочной зоне, поиграть в шахматы или провести пикник у воды. Парк «Скитские пруды» также оборудован и для отдыха с детьми: на его территории находится большая детская площадка, тир и веревочный парк. После долгой прогулки вы можете перекусить в кафе и ресторанах, которые также находятся на территории парка. Вы также можете посетить фестивали, которые проводятся на «Скитских прудах» достаточно часто. Территория парка оснащена туалетами, парковкой и охраной<b><br>Адрес:</b><br>Вифанская улица, вл. 151<b><br>Контакты:</b><br> https://www.instagram.com/park_skitskie_prudy/ </b><br> https://vk.com/skitskie_prudy </b><br> +7 (496) 5522489 <b><br>Сайт:</b><br> https://gorodskie-parki.mo.muzkult.ru/").openPopup();
+marker4.bindPopup("<img src='https://сергиев-посад.рф/wp-content/uploads/2015/12/37ee06a8672e9d099e37267c95955c86.jpg' width=250 height=200><br><b>Галерея АртБаzа</b><br>Место для творческих и креативных людей. Здесь вы можете осуществить свои самые смелые творческие задумки! Артбаzа является постоянно меняющейся площадкой. Выставки в этом месте сменяются ежемесячно. В этой галерее работают очень креативные люди: талантливые художники, фотографы, скульпторы и т.д.<b><br>Адрес:<br></b>Центральная ул., 6А, Сергиев Посад, Россия<b><br>Контакты:<br></b>https://vk.com/artbaza_sp<br></b>https://www.instagram.com/artbazagallery/<br></b>+7 (916) 739-24-26<br><b> Сайт: <br></b> http://artbaza.net/ ") .openPopup(); 
+marker5.bindPopup("<img scr='https://welcome.mosreg.ru/cache/thumbs/thumb_964_637_310933668.jpg' width=250 height=200><br><b>Музей частных коллекций<br></b>В музее на улице Карла Маркса выставлены частные коллекции горожан: монеты, модели автомобилей, техники, игрушек. Экспонаты в музее обновляются почти каждый месяц. Вы можете посетить музей в качестве гостя или передать свою коллекцию для выставления на витринах.<br><b>Адрес:<br></b>ул. Карла Маркса, 7, корп. 16, Сергиев Посад,эт. 3<br><b>Контакты:<br></b>https://vk.com/museum_collections_sp <br></b>https://www.instagram.com/museum_collections_sp/ <br></b> +7 (977) 474-16-97 <br><b>Сайт:br></b> http://museum-collections.ru/ ") .openPopup();
+marker6.bindPopup("<img scr='https://lh3.googleusercontent.com/proxy/fl0lbe3ub2muGjjRLJ91LJU3AhxxOam_yThz_stCkshfxxAG94Mw4z7EoEupvs9p7P1zC6MHohDvi60_NSA9ZOgnI7_Ent9_fdSnM5gNGuqEzw' width=250 height=200><br><b>Музей матрешки<br></b>Музей матрешки в Сергиевом Посаде является частью экспозиции Сергиево-Посадского государственного историко-художественного музея-заповедника. Выставка матрешек была торжественно открыта 10 июня 2012 года во время проведения первого фестиваля русской матрешки на территории одного из отделений музея — комплекса «Конный двор». Сергиево-Посадский музей-заповедник имеет в своих фондах одну из самых лучших коллекций матрешек, привезенных со всех регионов Российской Федерации. На выставке под названием «Музей русской матрешки» представлено множество экспонатов, датированных XX и XXI веками, принадлежащих как музею, так и частным лицам. По матрешкам можно легко проследить этапы их развития. Этот музей будет интересен и тем, кто заинтересован в развитии русского промысла и творчества, и другим туристам.<br><b>Адрес:<br></b>Сергиев Посад, пр-т Красной Армии, 134/2<br><b>Контакты:<br></b>+7 (496) 541 43 31 – касса <br></b>+7 (496) 540 53 56 – заказ экскурсий <br><b>Сайт:<br></b>http://www.museum-sp.ru/exhibition/all/vystavka-muzey-russkoy-matryeshki").openPopup();
+marker7.bindPopup("<img scr='https://avatars.mds.yandex.net/get-altay/2094876/2a0000016c43a665c71ec356ceda25859cf6/XXL' width=250 height=200><br><b>Сергиевская Кухмистерская<br></b> Посетить это замечательное место, значит, познакомиться с историей кулинарного искусства, историей зарождения общественного питания в России и попробовать блюда, о которых сейчас мало кто помнит. В данном музее вы можете увидеть уникальную коллекцию чугунных плит XIX-XX века, медной и фарфоровой посуды: кофемолки, мороженицы и многое другое. Во время экскурсии гости могут принять участие в приготовлении старинных блюд. После экскурсии каждый желающий сможет посетить обеденный зал кухмистерской и попробовать еще больше кулинарных шедевров из поваренных книг XIX-XX века. А приобрести эти самые книги, а также ландрины (леденцы, конфеты) на вес и в подарочной упаковке, мёд, посуду, открытки, антиквариат, приборы для выпечки и многое другое можно в Ландринной лавке. <br><b>Адрес:<br></b>ул. Карла Маркса, 7, корп. 16, Сергиев Посад <br><b>Контакты:<br></b>+7 (919) 767-39-05 - Музей Сергиевская кухмистерская и ландринная лавка, бронь частных экскурсий)<br></b>+7 (919) 767-36-78 - Кафе Сергиевская кухмистерская, бронь столиков<br>/b> https://vk.com/muzeykuhmister <br></b> https://www.instagram.com/muzeykuhmister/ <br><b>Сайт:<br></b> http://muzeykuhmister.ru/ ") .openPopup
+marker8.bindPopup("<img scr='https://in-posad.ru/img/2020/03/1600x1200/RxJA.jpg' width=250 height=200><br><b>Art Студия Натальи Курышевой<br><b>Творческая студия предлагает занятия живописью, графикой, интерьерным декором и многим другим. Посещать ее можно как на постоянной основе, например, для подготовки в художественные ВУЗы, так и в качестве экскурсии. Занятия в студии проходят в непринужденной творческой обстановке.<br><b>Адрес:<br></b>просп. Красной Армии, 84/22, Сергиев Посад, БЦ Dexter, этаж 3, офис 36, 37<br><b>Контакты:<br></b>instagram.com/___art__room___<br></b>kurysheva.natali@yandex.ru<br></b>+79165044599<br><b>Сайт:<br></b>https://art-studio.blizko.ru/about ") .openPopup();
+marker9.bindPopup("<img scr='https://avatars.mds.yandex.net/get-altay/4465653/2a00000177066f25c955a1363224cfbf1a51/XXL' width=250 height=200><b>Трикотажка Place<br></b>Уникальное арт-пространство для всех, кому есть чем поделиться с другими людьми. Трикотажка – проект, который призван объединить всех. Это место можно использовать как площадку для чтения лекций, коворкинга1, различных игр и интерактивов. Это также отличное место для отдыха: здесь можно пообщаться, выпить чашку чая и почитать.<br><b>Адрес:<br></b>улица Карла Маркса, 7, 2 этаж, Сергиев Посад<br><b>Контакты:<br></b>https://www.instagram.com/trikotazhka.project/ <br></b>https://vk.com/trikotazhkafest <br></b>+7 (905) 507-91-61 ") .openPopup();
+
+
+
+</script>
+
+</body>
+</html>
