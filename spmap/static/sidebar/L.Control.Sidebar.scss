@@ -86,7 +86,7 @@ $transition-duration: 0.5s;
         }
     }
 
-    @media(max-width:$threshold-sm - 1px) {
+    @media(max-width:$threshold-sm-1px) {
         @include widths($width-xs);
 
         padding: 0;
@@ -117,11 +117,11 @@ $transition-duration: 0.5s;
         }
     }
 
-    @media(min-width:$threshold-sm) and (max-width:$threshold-md - 1px) {
+    @media(min-width:$threshold-sm) and (max-width:$threshold-md-1px) {
         @include widths($width-sm);
     }
 
-    @media(min-width:$threshold-md) and (max-width:$threshold-lg - 1px) {
+    @media(min-width:$threshold-md) and (max-width:$threshold-lg-1px) {
         @include widths($width-md);
     }
 
